@@ -1,0 +1,14 @@
+Question :=>
+You are given two strings:
+s1 = ABACD
+s2 = CDABA 
+So You can see that if left rotate s1 two times we will get s2 
+
+Solution :=>
+if length(s1) == length(s2) then only we can proceed further
+Best Solution: 
+            Add s1 with s1 and find whether s2 is substring of the resultant
+            If s2 is a substring of resultant then s2 is rotation of s1
+Naive Solution: 
+            Run a loop for length(s1) times and rotate s1 by 1 in each run and compare whether s2 is obtained
+            If for loop completes and s2 is not obtained then s2 is not rotation of s1

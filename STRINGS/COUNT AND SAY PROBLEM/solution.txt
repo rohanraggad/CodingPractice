@@ -1,0 +1,16 @@
+Question :=>
+Given a string 1311:
+Count frequency of each char and print its frequecy first and then the char
+Output for the above: 111321
+
+given N 
+find N the term for COUNT AND SAY 
+Given that 1st term is 1 and second term is 11
+
+Solution:
+1. Append "$" in the last of input string
+2. Initialise count = 1, t = ""
+3. Iterate from 1 to len(input string)
+4. if s[i] == s[i-1]: count++
+5. elif s[i] != s[i-1]: t+=str(count) + s[i], count = 1
+6. s = t
