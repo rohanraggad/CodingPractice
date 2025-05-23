@@ -1,0 +1,30 @@
+Question :=> 
+Given three strings s1, s2, res 
+Find whether res is valid shuffle of s1 and s2.
+Assume that s1 and s2 don't have common characters i.e. s1 ∩ s2 = Φ
+Valid shuffle means order of characters in s1 and s2 must be preserved in res 
+Input 1:    s1 = xy
+            s2 = 12
+            res = x1y2
+Output 1:
+            True 
+
+Input 2:    s1 = xy 
+            s2 = 12
+            res = xy21 
+Output 2:
+            False 
+
+My Solution:
+1. Check whether len(s1) + len(s2) = len(res)
+2. If condition 1 satisfies then, 
+    a. Initialise two temporary strings: temp_s1 , temp_s2 with blank strings
+    b. Iterate over res and check whether characters are in s1 or s2 if in s1 append character in temp_s1 or in temp_s2 otherwise
+    c. Check if temp_s1 == s1 and temp_s2 == s2. If so then Valid Shuffle else not
+
+Given Solution:
+1. Check whether len(s1) + len(s2) = len(res)
+2. If condition 1 satisfies then, 
+    a. Initialise i,j,k iterators for s1,s2,res respectively and n1,n2,n3 length of strings s1,s2,res respectively
+    b. Iterate over res and check if res[k] is in s1 and i<n1 if so then i++ otherwise j++ if in s2 and j<n2 
+    c. If i==n1 and j==n2 then valid shuffle else not
