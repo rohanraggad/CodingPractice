@@ -1,0 +1,13 @@
+Solution:=>
+Intuition is that if the array is sorted then kth max element would be present as (len(array) - k)th place
+But if we use most efficent sort Algorithm then also our code will have time complexity  of O(nlogn)
+
+Using QuickSelect Algorithm:
+1. Idea is to select rightmost element as pivot 
+2. Then we compare array from leftmost to rightmost 
+    a. If we find any element >= pivot, we will swap that element with pivot 
+3. Now if the index of element before swapping is less than k, that means to left of pivot we have all elements less and in the right kth max is present.
+    So recursively call QuickSelect algorithm, this time we will seach in (index of swapped element) + 1 till rightmost
+4. Or if the index of element before swapping is greater than k, that means to right of pivot we have all elements greater and in the left kth max is present.
+    So recursively call QuickSelect algorithm, this time we will seach in leftmost till (index of swapped element) - 1 
+5. If index of swapped element == k we got the kth max.
