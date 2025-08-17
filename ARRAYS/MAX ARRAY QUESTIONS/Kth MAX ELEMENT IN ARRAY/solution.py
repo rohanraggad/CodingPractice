@@ -14,7 +14,7 @@ def quick_select(left,right):
 
 
 k = eval(input())
-nums = [eval(i) for i in input().split(" ")]
-nums = list(set(nums))
+nums = [eval(i) for i in input().split(",")]
+# nums = list(set(nums))
 k = len(nums) - k
 print(quick_select(0,len(nums)-1))
